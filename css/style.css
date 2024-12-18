@@ -1,0 +1,127 @@
+:root {
+  --primary-blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --color-gray: hsl(0, 0%, 59%);
+  --dark-blue: hsl(209, 33%, 12%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 15px;
+  max-width: 650px;
+  margin: auto;
+}
+h1 {
+  color: var(--color-gray);
+  font-weight: 300;
+  font-size: 50px;
+}
+h1 span {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-top: -13px;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+.form input, .form button {
+  padding: 15px 25px;
+  border-radius: 50px;
+  border: none;
+}
+.form input {
+  width: 65%;
+  border: 1px solid var(--pale-blue);
+}
+.form input:focus {
+  outline: none;
+}
+.form input::placeholder {
+  color: var(--pale-blue);
+  font-size: 300;
+}
+.form button {
+  width: 30%;
+  background-color: var(--primary-blue);
+  color: white;
+  box-shadow: 0px 3px 10px var(--pale-blue);
+  cursor: pointer;
+  transition: .3s;
+}
+.form button:hover {
+  background-color: hsl(223deg 87% 63% / 73%);
+}
+.error-text {
+  color: var(--light-red);
+  font-size: 12px;
+  font-style: italic;
+  margin: 5px 0 0 28px;
+  width: fit-content;
+  display: none;
+}
+.container .landing-img {
+  width: 100%;
+  margin: 70px 0;
+}
+.links i {
+  color: var(--primary-blue);
+  border: 1px solid #eee;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: .3s;
+}
+.links i:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+.footer {
+  color: var(--color-gray);
+  margin-top: 30px;
+}
+
+
+@media (max-width: 680px) {
+  .container {
+    max-width: 660px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 660px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .form input, .form button {
+    width: 80%;
+    margin: auto;
+  }
+}
+
