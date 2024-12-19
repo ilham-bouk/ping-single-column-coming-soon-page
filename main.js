@@ -7,6 +7,7 @@ submit.addEventListener('click', () => {
   if (valid) {
     input.value = "";
     errorText.style.display = "none";
+    input.style.borderColor = "var(--pale-blue)";
   } else {
     errorText.style.display = "block";
     input.style.borderColor = "var(--light-red)";
